@@ -2,13 +2,15 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 
+import placeholder from './assets/placeholder-thumbnail.png'
+
 function Projects() {
     const projectsData = [
         {
             title: "TrackTasty", 
             subtitle: "Macro Tracking Application with Predictive Analysis, AI-Powered Chatbot and Real Time Food Recognition through Camera.", 
             tags: ["Flutter", "Firebase", "Artificial Intelligence", "API Integration", "HealthTech", "Predictive Analysis"], 
-            imgsrc:"https://media.discordapp.net/attachments/943004013669023764/1459889893462380544/image.png?ex=6964ebea&is=69639a6a&hm=2a56ceb59d0af3759ebec9d89f520c788fe2014a5e688f8ab94cda4031f670c1&=&format=webp&quality=lossless&width=1522&height=856", 
+            imgsrc: placeholder, 
             src: "https://youtu.be/Za4RPfkgEGo"
         },
 
@@ -16,16 +18,16 @@ function Projects() {
             title: "TrackTasty Launch Page", 
             subtitle: "Landing page created to promote the mobile application.", 
             tags: ["React", "Tailwind CSS", "Landing Page", "Responsive Design"], 
-            imgsrc:"https://media.discordapp.net/attachments/943004013669023764/1459889893462380544/image.png?ex=6964ebea&is=69639a6a&hm=2a56ceb59d0af3759ebec9d89f520c788fe2014a5e688f8ab94cda4031f670c1&=&format=webp&quality=lossless&width=1522&height=856", 
-            src: "https://youtu.be/Za4RPfkgEGo"
+            imgsrc:placeholder,
+            src: "https://youtu.be/ImuWa3SJulY"
         },
 
         {
             title: "Developer Portfolio Page", 
             subtitle: "Personal website to showcase projects that I have created.", 
             tags: ["React", "Tailwind CSS", "Project Showcase", "UI/UX"], 
-            imgsrc:"https://media.discordapp.net/attachments/943004013669023764/1459889893462380544/image.png?ex=6964ebea&is=69639a6a&hm=2a56ceb59d0af3759ebec9d89f520c788fe2014a5e688f8ab94cda4031f670c1&=&format=webp&quality=lossless&width=1522&height=856", 
-            src: "https://youtu.be/Za4RPfkgEGo"
+            imgsrc: placeholder,
+            src: "https://youtu.be/aTj3RIQlj78"
         },
     ]
     return ( 

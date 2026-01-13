@@ -3,13 +3,14 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 
 import Resume from './assets/Resume.pdf'
+import Picture from './assets/ic_santos.jpg'
 
 function Overview() {
   const [activePdf, setActivePdf] = useState(null);
 
     return (
         <div className='flex items-center space-x-5'>
-          <img src="https://media.discordapp.net/attachments/949952154280525825/1452599663218921583/IMG_20251222_175202.jpg?ex=696372db&is=6962215b&hm=267620300f5302b5517f340f646dfdbc5f20c11bbb3b9a22e3934cdf15565d08&=&format=webp&width=180&height=180" 
+          <img src={Picture}
             className='border border-solid border-border-primary p-0 rounded-full w-40 h-40 object-cover' />
 
           <div className='space-y-3'>

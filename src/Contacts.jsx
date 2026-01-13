@@ -39,21 +39,21 @@ function Contacts() {
                     <h2 className='text-lg font-semibold mb-4'>🔗 Connect with Me</h2>
                     <div className='space-y-3'>
                         {/* LinkedIn */}
-                        <a href="https://www.linkedin.com/in/lawrence-santos-7880a8386/" target="_blank" rel="noreferrer"
+                        <a href="https://www.linkedin.com/in/lawrence-santos-7880a8386/" target="_blank" rel="noreferrer noopener"
                             className='group flex items-center gap-3 w-full border border-solid border-border-primary/20 rounded-xl p-4 cursor-pointer transition-all hover:border-primary-a30 transform duration-300 ease-in-out hover:-translate-y-1 shadow-md hover:shadow-2xl'>
                             <img src={linkedinIcon} alt="LinkedIn" className="theme-icon w-6 h-6 group-hover:brightness-125" />
                             <span className='text-text-primary group-hover:text-primary-a30 transition-colors'>LinkedIn</span>
                         </a>
 
                         {/* GitHub */}
-                        <a href="https://github.com/Xeno-bytes" target="_blank" rel="noreferrer"
+                        <a href="https://github.com/Xeno-bytes" target="_blank" rel="noreferrer noopener"
                             className='group flex items-center gap-3 w-full border border-solid border-border-primary/20 rounded-xl p-4 cursor-pointer transition-all hover:border-primary-a30 transform duration-300 ease-in-out hover:-translate-y-1 shadow-md hover:shadow-2xl'>
                             <img src={githubIcon} alt="GitHub" className="theme-icon w-6 h-6 group-hover:brightness-125" />
                             <span className='text-text-primary group-hover:text-primary-a30 transition-colors'>GitHub</span>
                         </a>
 
                         {/* Facebook */}
-                        <a href="https://www.facebook.com/Xenobytes09" target="_blank" rel="noreferrer"
+                        <a href="https://www.facebook.com/Xenobytes09" target="_blank" rel="noreferrer noopener"
                             className='group flex items-center gap-3 w-full border border-solid border-border-primary/20 rounded-xl p-4 cursor-pointer transition-all hover:border-primary-a30 transform duration-300 ease-in-out hover:-translate-y-1 shadow-md hover:shadow-2xl'>
                             <img src={facebookIcon} alt="Facebook" className="theme-icon w-6 h-6 group-hover:brightness-125" />
                             <span className='text-text-primary group-hover:text-primary-a30 transition-colors'>Facebook</span>
