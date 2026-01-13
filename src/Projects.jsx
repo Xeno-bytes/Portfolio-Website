@@ -1,0 +1,87 @@
+import { useState } from 'react'
+import reactLogo from './assets/react.svg'
+import viteLogo from '/vite.svg'
+
+function Projects() {
+    const projectsData = [
+        {
+            title: "TrackTasty", 
+            subtitle: "Macro Tracking Application with Predictive Analysis, AI-Powered Chatbot and Real Time Food Recognition through Camera.", 
+            tags: ["Flutter", "Firebase", "Artificial Intelligence", "API Integration", "HealthTech", "Predictive Analysis"], 
+            imgsrc:"https://media.discordapp.net/attachments/943004013669023764/1459889893462380544/image.png?ex=6964ebea&is=69639a6a&hm=2a56ceb59d0af3759ebec9d89f520c788fe2014a5e688f8ab94cda4031f670c1&=&format=webp&quality=lossless&width=1522&height=856", 
+            src: "https://youtu.be/Za4RPfkgEGo"
+        },
+
+        {
+            title: "TrackTasty Launch Page", 
+            subtitle: "Landing page created to promote the mobile application.", 
+            tags: ["React", "Tailwind CSS", "Landing Page", "Responsive Design"], 
+            imgsrc:"https://media.discordapp.net/attachments/943004013669023764/1459889893462380544/image.png?ex=6964ebea&is=69639a6a&hm=2a56ceb59d0af3759ebec9d89f520c788fe2014a5e688f8ab94cda4031f670c1&=&format=webp&quality=lossless&width=1522&height=856", 
+            src: "https://youtu.be/Za4RPfkgEGo"
+        },
+
+        {
+            title: "Developer Portfolio Page", 
+            subtitle: "Personal website to showcase projects that I have created.", 
+            tags: ["React", "Tailwind CSS", "Project Showcase", "UI/UX"], 
+            imgsrc:"https://media.discordapp.net/attachments/943004013669023764/1459889893462380544/image.png?ex=6964ebea&is=69639a6a&hm=2a56ceb59d0af3759ebec9d89f520c788fe2014a5e688f8ab94cda4031f670c1&=&format=webp&quality=lossless&width=1522&height=856", 
+            src: "https://youtu.be/Za4RPfkgEGo"
+        },
+    ]
+    return ( 
+        <div>
+            <h1 className='pb-5'>
+                🗂️ Projects
+            </h1>
+
+            {/* Container for Horizontal Scrolling */}
+            <div className='overflow-x-auto snap-x snap-mandatory whitespace-nowrap pb-10 custom-scrollbar pt-5'>
+                <div className="inline-flex flex-row items-stretch gap-8 px-4 ">
+                    {projectsData.map((project, index) => (
+                        <a 
+                            key={index} 
+                            href={project.src} 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            className="group block whitespace-normal snap-center shrink-0"
+                        >
+                            <div className='transform ease-in-out hover:-translate-y-1 w-100 md:w-162.5 h-full p-8 rounded-3xl border-2 border-border-primary/20 bg-surface-a10 transition-all duration-500 group-hover:border-primary-a30 group-hover:bg-surface-a20 shadow-md hover:shadow-2xl flex flex-col '>
+                                
+                                <div className='w-full aspect-video overflow-hidden rounded-2xl mb-8 border border-border-primary/5 shrink-0'>
+                                    <img 
+                                        className="w-full h-full object-cover transition-transform duration-700 ease-in-out group-hover:scale-110"
+                                        src={project.imgsrc} 
+                                        alt={project.title}
+                                    />
+                                </div>
+                                
+                                <h2 className='text-3xl font-bold mb-4 group-hover:text-primary-a30 transition-colors'> 
+                                    {project.title}
+                                </h2>
+
+                                <p className='text-lg mb-6 leading-relaxed grow'>
+                                    {project.subtitle}
+                                </p>
+
+                                <ul className='flex flex-wrap gap-3 mt-auto'>
+                                    {project.tags.map((tag, tagIndex) => (
+                                        <li 
+                                            key={tagIndex} 
+                                            className='border border-border-primary/10 rounded-full px-4 py-1.5 text-sm font-medium bg-surface-a20 transition-colors duration-700 group-hover:bg-surface-a10 text-text-secondary'
+                                        >
+                                            {tag}
+                                        </li>
+                                    ))}
+                                </ul>
+                            </div> 
+                        </a>
+                    ))}
+                </div>
+            </div>
+            
+            
+        </div>
+    )
+}
+
+export default Projects;

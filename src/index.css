@@ -1,0 +1,191 @@
+@import "tailwindcss";
+
+/* ================================
+   BASE STYLES
+================================ */
+@layer base {
+  html {
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  body {
+    background-color: var(--color-surface-a0);
+    color: var(--color-text-primary);
+  }
+
+  h1 {
+    @apply text-3xl font-bold;
+    color: var(--color-text-primary);
+  }
+
+  h2 {
+    @apply text-2xl font-semibold;
+    color: var(--color-text-primary);
+  }
+
+  p {
+    color: var(--color-text-secondary);
+  }
+
+  /* Social / UI icons */
+  .theme-icon {
+    filter: brightness(0) invert(1);
+    transition: filter 0.3s ease;
+  }
+
+  /* Light mode */
+  .light .theme-icon {
+    filter: none;
+  }
+}
+
+/* ================================
+   ANIMATIONS
+================================ */
+@keyframes pulse-ring {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7);
+  }
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 10px rgba(255, 255, 255, 0);
+  }
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+  }
+}
+
+.animate-pulse-ring {
+  animation: pulse-ring 2s infinite;
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-up {
+  animation: fade-up 0.6s ease-out forwards;
+}
+
+.delay-100 { animation-delay: 0.1s; }
+.delay-200 { animation-delay: 0.2s; }
+.delay-300 { animation-delay: 0.3s; }
+.delay-400 { animation-delay: 0.4s; }
+.delay-500 { animation-delay: 0.5s; }
+
+/* ================================
+   SCROLLBAR
+================================ */
+.custom-scrollbar::-webkit-scrollbar {
+  height: 8px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #5f82a4;
+  border-radius: 10px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #477297;
+}
+
+/* ================================
+   THEME VARIABLES (DARK DEFAULT)
+================================ */
+@theme {
+  /* Header */
+  --color-headerbg: #a4c991;
+
+  /* Text */
+  --color-text-primary: #ffffff;
+  --color-text-secondary: #d1d5db;
+  --color-text-primary-light: #9ca3af;
+
+  --color-border-primary: #ffffff;
+
+  /* Primary */
+  --color-primary-a0: #2c628b;
+  --color-primary-a10: #477297;
+  --color-primary-a20: #5f82a4;
+  --color-primary-a30: #7693b1;
+  --color-primary-a40: #8ca4bd;
+  --color-primary-a50: #a3b6ca;
+
+  /* Surface */
+  --color-surface-a0: #121212;
+  --color-surface-a10: #282828;
+  --color-surface-a20: #3f3f3f;
+  --color-surface-a30: #575757;
+  --color-surface-a40: #717171;
+  --color-surface-a50: #8b8b8b;
+
+  /* Tonal Surface */
+  --color-surface-tonal-a0: #171a1d;
+  --color-surface-tonal-a10: #2c2f32;
+  --color-surface-tonal-a20: #434548;
+  --color-surface-tonal-a30: #5b5d5f;
+  --color-surface-tonal-a40: #747678;
+  --color-surface-tonal-a50: #8e9091;
+
+  /* Status */
+  --color-success-a0: #22946e;
+  --color-success-a10: #47d5a6;
+  --color-success-a20: #9ae8ce;
+
+  --color-warning-a0: #a87a2a;
+  --color-warning-a10: #d7ac61;
+  --color-warning-a20: #ecd7b2;
+
+  --color-danger-a0: #9c2121;
+  --color-danger-a10: #d94a4a;
+  --color-danger-a20: #eb9e9e;
+
+  --color-info-a0: #21498a;
+  --color-info-a10: #4077d1;
+  --color-info-a20: #92b2e5;
+}
+
+/* ================================
+   LIGHT MODE OVERRIDES
+================================ */
+.light {
+  --color-text-primary: #111827;
+  --color-text-secondary: #4b5563;
+  --color-text-primary-light: #9ca3af;
+
+  --color-border-primary: #282828;
+
+  --color-primary-a0: #2563eb;
+  --color-primary-a10: #3b82f6;
+  --color-primary-a20: #60a5fa;
+  --color-primary-a30: #93c5fd;
+  --color-primary-a40: #bfdbfe;
+  --color-primary-a50: #dbeafe;
+
+  --color-surface-a0: #f9fafb;
+  --color-surface-a10: #ffffff;
+  --color-surface-a20: #e5e7eb;
+  --color-surface-a30: #d1d5db;
+  --color-surface-a40: #9ca3af;
+  --color-surface-a50: #6b7280;
+
+  --color-surface-tonal-a0: #ffffff;
+  --color-surface-tonal-a10: #f3f4f6;
+  --color-surface-tonal-a20: #e5e7eb;
+  --color-surface-tonal-a30: #d1d5db;
+  --color-surface-tonal-a40: #9ca3af;
+  --color-surface-tonal-a50: #6b7280;
+}
+
+@tailwind utilities;
