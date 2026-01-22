@@ -2,30 +2,33 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 
-import placeholder from './assets/placeholder-thumbnail.png'
+import placeholder from './assets/website-thumbnail.png'
+import tracktastyweb from './assets/tracktasty-thumbnail.png'
+import tracktastyapp from './assets/tracktasty-app-thumbnail.jpg'
+
 
 function Projects() {
     const projectsData = [
         {
             title: "TrackTasty", 
             subtitle: "Macro Tracking Application with Predictive Analysis, AI-Powered Chatbot and Real Time Food Recognition through Camera.", 
-            tags: ["Flutter", "Firebase", "Artificial Intelligence", "API Integration", "HealthTech", "Predictive Analysis"], 
-            imgsrc: placeholder, 
-            src: "https://youtu.be/Za4RPfkgEGo"
+            tags: ["Mobile Application", "Flutter", "Firebase", "Artificial Intelligence", "API Integration", "HealthTech", "Predictive Analysis"], 
+            imgsrc: tracktastyapp, 
+            src: "https://tracktasty-website.vercel.app/download"
         },
 
         {
             title: "TrackTasty Launch Page", 
             subtitle: "Landing page created to promote the mobile application.", 
-            tags: ["React", "Tailwind CSS", "Landing Page", "Responsive Design"], 
-            imgsrc:placeholder,
-            src: "https://youtu.be/ImuWa3SJulY"
+            tags: ["Website", "React", "Tailwind CSS", "Landing Page", "Responsive Design"], 
+            imgsrc:tracktastyweb,
+            src: "https://tracktasty-website.vercel.app/"
         },
 
         {
             title: "Developer Portfolio Page", 
             subtitle: "Personal website to showcase projects that I have created.", 
-            tags: ["React", "Tailwind CSS", "Project Showcase", "UI/UX"], 
+            tags: ["Website", "React", "Tailwind CSS", "Project Showcase", "UI/UX"], 
             imgsrc: placeholder,
             src: "https://youtu.be/aTj3RIQlj78"
         },
@@ -49,9 +52,9 @@ function Projects() {
                         >
                             <div className='transform ease-in-out hover:-translate-y-1 w-100 md:w-162.5 h-full p-8 rounded-3xl border-2 border-border-primary/20 bg-surface-a10 transition-all duration-500 group-hover:border-primary-a30 group-hover:bg-surface-a20 shadow-md hover:shadow-2xl flex flex-col '>
                                 
-                                <div className='w-full aspect-video overflow-hidden rounded-2xl mb-8 border border-border-primary/5 shrink-0'>
+                                <div className='w-full aspect-video overflow-hidden rounded-2xl mb-8 border border-border-primary/5 shrink-0 bg-black/20'>
                                     <img 
-                                        className="w-full h-full object-cover transition-transform duration-700 ease-in-out group-hover:scale-110"
+                                        className="w-full h-full object-contain transition-transform duration-700 ease-in-out group-hover:scale-105"
                                         src={project.imgsrc} 
                                         alt={project.title}
                                     />
