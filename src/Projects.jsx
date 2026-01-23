@@ -30,7 +30,7 @@ function Projects() {
             subtitle: "Personal website to showcase projects that I have created.", 
             tags: ["Website", "React", "Tailwind CSS", "Project Showcase", "UI/UX"], 
             imgsrc: placeholder,
-            src: "https://youtu.be/aTj3RIQlj78"
+            src: "https://portfolio-lawrence-santos.vercel.app/"
         },
     ]
     return ( 
