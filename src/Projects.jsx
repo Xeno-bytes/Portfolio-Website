@@ -26,6 +26,14 @@ function Projects() {
         },
 
         {
+            title: "PGX Group Website", 
+            subtitle: "Company website for PGX Group, built to present the organization's services and online presence.", 
+            tags: ["Website", "Company Website", "Responsive Design", "Web Development"], 
+            imgsrc: placeholder,
+            src: "https://pgx.group"
+        },
+
+        {
             title: "Developer Portfolio Page", 
             subtitle: "Personal website to showcase projects that I have created.", 
             tags: ["Website", "React", "Tailwind CSS", "Project Showcase", "UI/UX"], 
