@@ -5,6 +5,7 @@ import viteLogo from '/vite.svg'
 import placeholder from './assets/website-thumbnail.png'
 import tracktastyweb from './assets/tracktasty-thumbnail.png'
 import tracktastyapp from './assets/tracktasty-app-thumbnail.jpg'
+import pgxthumbnail from './assets/pgx-thumbnail.png'
 
 
 function Projects() {
@@ -28,8 +29,8 @@ function Projects() {
         {
             title: "PGX Group Website", 
             subtitle: "Company website for PGX Group, built to present the organization's services and online presence.", 
-            tags: ["Website", "Company Website", "Responsive Design", "Web Development"], 
-            imgsrc: placeholder,
+            tags: ["Website", "HTML/CSS/JS", "Responsive Design", "Interactive UI"], 
+            imgsrc: pgxthumbnail,
             src: "https://pgx.group"
         },
 

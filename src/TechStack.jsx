@@ -2,19 +2,30 @@ import { useState } from 'react'
 
 function Experience() {
   const iconMap = {
+    // Frontend
     'HTML': 'html5',
     'CSS': 'css3', 
     'JavaScript': 'javascript',
+    'TypeScript': 'typescript',
     'React': 'react',
     'Flutter': 'flutter',
     'Tailwind CSS': 'tailwindcss',
-    'ASP.NET': 'dot-net',
+
+    // Backend & Databases
     'Firebase': 'firebase',
-    'SQL': 'sqlite',
-    'Figma': 'figma',
-    'Github': 'github',
-    'VS Code': 'visualstudio',
+    'Payload CMS': 'postgresql',
+    'ASP.NET Core': 'dotnetcore',
+    'Python': 'python',
+    'PostgreSQL': 'postgresql',
+    'MongoDB': 'mongodb',
+
+    // DevOps & Tools
+    'GitHub': 'github',
+    'GitLab': 'gitlab',
+    'Docker': 'docker',
+    'VS Code': 'vscode',
     'Android Studio': 'androidstudio',
+    'Figma': 'figma'
   };
 
   const emojiMap = {
@@ -25,9 +36,9 @@ function Experience() {
     'Receptive to Feedback': '👂'
   };
 
-  const frontendSkills = ['HTML', 'CSS', 'JavaScript', 'React', 'Flutter', 'Tailwind CSS', 'ASP.NET'];
-  const backendSkills = ['Firebase', 'SQL'];
-  const designTools = ['Figma', 'Github', 'VS Code', 'Android Studio'];
+  const frontendSkills = ['HTML', 'CSS', 'JavaScript', 'TypeScript', 'React', 'Flutter', 'Tailwind CSS'];  
+  const backendSkills = ['Firebase', 'Payload CMS', 'ASP.NET Core', 'Python', 'PostgreSQL', 'MongoDB'];
+  const devOpsTools = ['GitHub', 'GitLab', 'Docker', 'VS Code', 'Android Studio', 'Figma'];
   const softSkills = ['Adaptability', 'Time Management', 'Communication', 'Critical Thinker', 'Receptive to Feedback'];
 
   const SkillList = ({skills, title}) => {
@@ -84,7 +95,7 @@ function Experience() {
 
           <SkillList skills={frontendSkills} title={"Front End"} />
           <SkillList skills={backendSkills} title={"Back End"} />
-          <SkillList skills={designTools} title={"Design & Tools"} />
+          <SkillList skills={devOpsTools} title={"Design & Tools"} />
           <SkillList skills={softSkills} title={"Soft Skills"} />
       </div>
   )
