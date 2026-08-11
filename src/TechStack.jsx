@@ -33,13 +33,13 @@ function Experience() {
     'Time Management': '⏳',
     'Communication': '💬',
     'Critical Thinker': '🧠',
-    'Receptive to Feedback': '👂'
+    'Giving and Receiving Feedback': '👂'
   };
 
   const frontendSkills = ['HTML', 'CSS', 'JavaScript', 'TypeScript', 'React', 'Flutter', 'Tailwind CSS'];  
   const backendSkills = ['Firebase', 'Payload CMS', 'ASP.NET Core', 'Python', 'PostgreSQL', 'MongoDB'];
   const devOpsTools = ['GitHub', 'GitLab', 'Docker', 'VS Code', 'Android Studio', 'Figma'];
-  const softSkills = ['Adaptability', 'Time Management', 'Communication', 'Critical Thinker', 'Receptive to Feedback'];
+  const softSkills = ['Adaptability', 'Time Management', 'Communication', 'Collaboration', 'Critical Thinker', 'Giving and Receiving Feedback'];
 
   const SkillList = ({skills, title}) => {
     return (
@@ -95,7 +95,7 @@ function Experience() {
 
           <SkillList skills={frontendSkills} title={"Front End"} />
           <SkillList skills={backendSkills} title={"Back End"} />
-          <SkillList skills={devOpsTools} title={"Design & Tools"} />
+          <SkillList skills={devOpsTools} title={"Design & Tools for Collaboration"} />
           <SkillList skills={softSkills} title={"Soft Skills"} />
       </div>
   )

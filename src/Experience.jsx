@@ -5,7 +5,7 @@ import viteLogo from '/vite.svg'
 function Experience() {
     const experiences = [
       { title: "Actively Seeking for Job", subtitle: "Aiming for Mobile or Web Developer", year: "2026", active: true },
-      { title: "BS Information Technology - 4th Year", subtitle: "STI College San Jose del Monte", year: "2026", active: true },
+      { title: "BS Information Technology - 4th Year", subtitle: "STI College San Jose del Monte", year: "2026",},
       { title: "Software Developer Intern", subtitle: "PGX Group Inc.", year: "2026"},
       { title: "Capstone Project Lead Developer", subtitle: "TrackTasty: AI-Powered Macro Tracking", year: "2025"},
       { title: "SHS Strand: Information Communication and Technology", subtitle: "Specialized in Mobile and Web Development", year: "2022"},
