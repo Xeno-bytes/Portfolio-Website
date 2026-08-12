@@ -11,7 +11,7 @@ function AboutMe() {
 
             <div className='space-y-4'>
               <p className=''>
-                I am a 4th year Bachelor of Science in Information Technology student at STI College San Jose del Monte. I have hands-on experience in building Android and website applications.
+                I am a Bachelor of Science in Information Technology graduate at STI College San Jose del Monte. I have hands-on experience in building Android and website applications.
               </p>
               
               <p className=''>

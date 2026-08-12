@@ -32,6 +32,7 @@ function Experience() {
     'Adaptability': '🦎',
     'Time Management': '⏳',
     'Communication': '💬',
+    'Collaboration': '🤝',
     'Critical Thinker': '🧠',
     'Giving and Receiving Feedback': '👂'
   };

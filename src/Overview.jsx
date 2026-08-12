@@ -14,7 +14,7 @@ function Overview({ onViewResume }) {
             </h1>
             <div className='space-y-2'>
               <p className='text-lg text-text-primary-light'>📍 Central Luzon, Philippines</p>
-              <p className='text-lg text-text-secondary'>BSIT Student / Aspiring Web/Mobile Developer</p>
+              <p className='text-lg text-text-secondary'>BSIT Graduate / Web/Mobile Developer</p>
             </div>
             <div className='flex flex-wrap justify-center md:justify-start gap-3 pt-2'>
             <button 
