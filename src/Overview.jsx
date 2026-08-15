@@ -1,11 +1,14 @@
 import { useState } from 'react'
 
-import Picture from './assets/ic_santos.jpg'
+import DarkPicture from './assets/ic_santos.jpg'
+import LightPicture from './assets/ic_santos_light.jpg'
 
-function Overview({ onViewResume }) {
+function Overview({theme, onViewResume }) {
+  const imageSrc = theme === 'light' ? LightPicture : DarkPicture;
+
     return (
         <div className='flex items-center space-x-5'>
-          <img src={Picture}
+          <img src={imageSrc}
             className='border border-solid border-border-primary p-0 rounded-full w-40 h-40 object-cover' />
 
           <div className='space-y-3'>

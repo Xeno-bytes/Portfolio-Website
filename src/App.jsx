@@ -23,7 +23,7 @@ function App() {
   return (
     <div className="min-h-screen bg-surface-a0 transition-colors duration-300">
       <div className="flex items-start justify-between px-20 py-15 gap-6 animate-fade-up">
-        <Overview onViewResume={() => setActivePdf(Resume)} />
+        <Overview theme={theme} onViewResume={() => setActivePdf(Resume)} />
 
         <button
           onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
