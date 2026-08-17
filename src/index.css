@@ -4,11 +4,7 @@
    BASE STYLES
 ================================ */
 @layer base {
-  html {
-    transition: background-color 0.3s ease, color 0.3s ease;
-  }
-
-  body {
+  html, body {
     background-color: var(--color-surface-a0);
     color: var(--color-text-primary);
   }
@@ -93,11 +89,81 @@
   border-radius: 10px;
 }
 .custom-scrollbar::-webkit-scrollbar-thumb {
-  background: #5f82a4;
+  background: var(--color-primary-a30); /*#5f82a4*/
   border-radius: 10px;
 }
 .custom-scrollbar::-webkit-scrollbar-thumb:hover {
-  background: #477297;
+  background: var(--color-primary-a20);
+}
+
+/* ================================
+   DARK MODE TOGGLE ANIMATION
+================================ */
+
+/* Overlay wipe animation */
+@keyframes overlay-fade-in-out {
+  0% {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  15% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  85% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.05);
+  }
+}
+
+/* Sun ray shrink animation */
+@keyframes overlay-fade-in-out {
+  0% {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  15% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  85% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.05);
+  }
+}
+
+/* Sun ray burst effect */
+@keyframes ray-burst {
+  0% {
+    stroke-dashoffset: 0;
+    opacity: 1;
+  }
+  50% {
+    stroke-dashoffset: 12;
+    opacity: 0.5;
+  }
+  100% {
+    stroke-dashoffset: 24;
+    opacity: 0;
+  }
+}
+
+.animate-overlay-smooth {
+  animation: overlay-fade-in-out 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  will-change: transform, opacity;
+}
+
+.animate-ray-burst {
+  stroke-dasharray: 6 6;
+  animation: ray-burst 0.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
 }
 
 /* ================================
@@ -166,12 +232,12 @@
 
   --color-border-primary: #282828;
 
-  --color-primary-a0: #2563eb;
-  --color-primary-a10: #3b82f6;
-  --color-primary-a20: #60a5fa;
-  --color-primary-a30: #93c5fd;
-  --color-primary-a40: #bfdbfe;
-  --color-primary-a50: #dbeafe;
+  --color-primary-a50: #2563eb;
+  --color-primary-a40: #3b82f6;
+  --color-primary-a30: #60a5fa;
+  --color-primary-a20: #93c5fd;
+  --color-primary-a10: #bfdbfe;
+  --color-primary-a0: #dbeafe;
 
   --color-surface-a0: #f9fafb;
   --color-surface-a10: #ffffff;
