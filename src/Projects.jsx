@@ -1,7 +1,4 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-
+import { FolderGit2 } from 'lucide-react'
 import placeholder from './assets/website-thumbnail.png'
 import tracktastyweb from './assets/tracktasty-thumbnail.png'
 import tracktastyapp from './assets/tracktasty-app-thumbnail.jpg'
@@ -44,9 +41,14 @@ function Projects() {
     ]
     return ( 
         <div>
-            <h1 className='pb-5'>
-                🗂️ Projects
-            </h1>
+            <div className="flex items-center gap-3 pb-5">
+                <div className="flex items-center justify-center p-2.5 rounded-xl bg-surface-a20 border border-surface-a30 text-text-primary shadow-sm">
+                    <FolderGit2 className="w-5 h-5" />
+                </div>
+                <h1 className="text-2xl font-bold text-text-primary">
+                    Projects
+                </h1>
+            </div>
 
             {/* Container for Horizontal Scrolling */}
             <div className='overflow-x-auto snap-x snap-mandatory whitespace-nowrap pb-10 custom-scrollbar pt-5'>

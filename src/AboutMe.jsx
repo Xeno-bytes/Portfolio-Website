@@ -1,13 +1,16 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import { User } from 'lucide-react'
 
 function AboutMe() {
     return (
         <div>
-            <h1 className='pb-5'>
-              👤 About Me
-            </h1>
+           <div className="flex items-center gap-3 pb-5">
+              <div className="flex items-center justify-center p-2.5 rounded-xl bg-surface-a20 border border-surface-a30 text-text-primary shadow-sm">
+                <User className="w-5 h-5" />
+              </div>
+              <h1 className="text-2xl font-bold text-text-primary">
+                About Me
+              </h1>
+            </div>
 
             <div className='space-y-4'>
               <p className=''>

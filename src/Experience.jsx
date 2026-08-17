@@ -1,6 +1,4 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import { Briefcase } from 'lucide-react'
 
 function Experience() {
     const experiences = [
@@ -14,11 +12,16 @@ function Experience() {
     ];
     return (
       <div>
-          <h1 className='pb-10'>
-            📖 Experience
-          </h1>
+          <div className="flex items-center gap-3 pb-10">
+            <div className="flex items-center justify-center p-2.5 rounded-xl bg-surface-a20 border border-surface-a30 text-text-primary shadow-sm">
+              <Briefcase className="w-5 h-5" />
+            </div>
+            <h1 className="text-2xl font-bold text-text-primary">
+              Experience
+            </h1>
+          </div>
 
-          <div className="relative ml-2">
+          <div className="relative ml-3">
             {experiences.map((item,index) => (
               <div key={index} className='relative pl-8 pb-10 last:pb-0 group'>
                 {/* Vertical Line */}

@@ -1,5 +1,4 @@
-import { useState } from 'react'
-
+import { Award } from 'lucide-react'
 import JavaCert from './assets/JavaFundamentals.pdf'
 import SysAdCert from './assets/SysAdFundamentals.pdf'
 
@@ -12,7 +11,14 @@ function Certifications({ onCertClick }) {
 
     return (
         <div className="relative">
-            <h1 className='mb-5 text-2xl font-bold'>🎖️ Recent Certifications</h1>
+            <div className="flex items-center gap-3 mb-5">
+                <div className="flex items-center justify-center p-2.5 rounded-xl bg-surface-a20 border border-surface-a30 text-text-primary shadow-sm">
+                    <Award className="w-5 h-5" />
+                </div>
+                <h1 className="text-2xl font-bold text-text-primary">
+                    Recent Certifications
+                </h1>
+            </div>
 
             <div className='flex flex-col gap-5'>
                 {certifications.map((cert, index) => (

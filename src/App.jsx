@@ -94,7 +94,7 @@ function App() {
             initial="hidden"
             animate="visible"
             custom={0.1}
-            className='border border-solid border-surface-a30 bg-surface-a10 px-20 py-10 rounded-3xl shadow-surface-a20/40 hover:shadow-xl'
+            className='border border-solid border-surface-a30 bg-surface-a10 px-20 py-10 rounded-3xl shadow-surface-a20/40 hover:shadow-xl transition-shadow duration-300 ease-in-out'
           >
             <AboutMe />
           </motion.div>
@@ -105,7 +105,7 @@ function App() {
             initial="hidden"
             animate="visible"
             custom={0.2}
-            className='border border-solid border-surface-a30 bg-surface-a10 px-20 py-10 rounded-3xl shadow-surface-a20/40 hover:shadow-xl'
+            className='border border-solid border-surface-a30 bg-surface-a10 px-20 py-10 rounded-3xl shadow-surface-a20/40 hover:shadow-xl transition-shadow duration-300 ease-in-out'
           >
             <TechStack />
           </motion.div>
@@ -119,7 +119,7 @@ function App() {
               initial="hidden"
               animate="visible"
               custom={0.1}
-              className='border border-solid border-surface-a30 bg-surface-a10 px-20 py-10 rounded-3xl shadow-surface-a20/40 hover:shadow-xl'
+              className='border border-solid border-surface-a30 bg-surface-a10 px-20 py-10 rounded-3xl shadow-surface-a20/40 hover:shadow-xl transition-shadow duration-300 ease-in-out'
             >
               <Experience />
             </motion.div>
@@ -130,7 +130,7 @@ function App() {
             initial="hidden"
             animate="visible"
             custom={0.2}
-            className='border border-solid border-surface-a30 bg-surface-a10 px-20 py-10 rounded-3xl shadow-surface-a20/40 hover:shadow-xl'
+            className='border border-solid border-surface-a30 bg-surface-a10 px-20 py-10 rounded-3xl shadow-surface-a20/40 hover:shadow-xl transition-shadow duration-300 ease-in-out'
           >
             <BeyondCoding />
           </motion.div>
@@ -144,7 +144,7 @@ function App() {
           initial="hidden"
           animate="visible"
           custom={0.3}
-          className='border border-solid border-surface-a30 bg-surface-a10 px-20 py-10 rounded-3xl shadow-surface-a20/40 hover:shadow-xl'
+          className='border border-solid border-surface-a30 bg-surface-a10 px-20 py-10 rounded-3xl shadow-surface-a20/40 hover:shadow-xl transition-shadow duration-300 ease-in-out'
         >
           <Projects />
         </motion.div>
@@ -158,7 +158,7 @@ function App() {
             initial="hidden"
             animate="visible"
             custom={0.4}
-            className='border border-solid border-surface-a30 bg-surface-a10 px-20 py-10 rounded-3xl shadow-surface-a20/40 hover:shadow-xl h-full'
+            className='border border-solid border-surface-a30 bg-surface-a10 px-20 py-10 rounded-3xl shadow-surface-a20/40 hover:shadow-xl transition-shadow duration-300 ease-in-out h-full'
           >
             <Certifications onCertClick={(file) => setActivePdf(file)} />
           </motion.div>
@@ -171,7 +171,7 @@ function App() {
             initial="hidden"
             animate="visible"
             custom={0.4}
-            className='border border-solid border-surface-a30 bg-surface-a10 px-20 py-10 rounded-3xl shadow-surface-a20/40 hover:shadow-xl h-full'
+            className='border border-solid border-surface-a30 bg-surface-a10 px-20 py-10 rounded-3xl shadow-surface-a20/40 hover:shadow-xl transition-shadow duration-300 ease-in-out h-full'
           >
             <Contacts />
           </motion.div>
