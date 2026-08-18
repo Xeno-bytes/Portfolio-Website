@@ -234,32 +234,32 @@
    LIGHT MODE OVERRIDES
 ================================ */
 .light {
-  --color-text-primary: #111827;
-  --color-text-secondary: #4b5563;
-  --color-text-primary-light: #9ca3af;
+  --color-text-primary: #0f172a;
+  --color-text-secondary: #475569;
+  --color-text-primary-light: #64748b;
 
   --color-border-primary: #282828;
 
-  --color-primary-a50: #2563eb;
-  --color-primary-a40: #3b82f6;
-  --color-primary-a30: #60a5fa;
-  --color-primary-a20: #93c5fd;
-  --color-primary-a10: #bfdbfe;
+  --color-primary-a50: #1d4ed8;
+  --color-primary-a40: #2563eb;
+  --color-primary-a30: #3b82f6;
+  --color-primary-a20: #60a5fa;
+  --color-primary-a10: #93c5fd;
   --color-primary-a0: #dbeafe;
 
-  --color-surface-a0: #f9fafb;
+  --color-surface-a0: #f8fafc;
   --color-surface-a10: #ffffff;
-  --color-surface-a20: #e5e7eb;
-  --color-surface-a30: #d1d5db;
-  --color-surface-a40: #9ca3af;
-  --color-surface-a50: #6b7280;
+  --color-surface-a20: #f1f5f9;
+  --color-surface-a30: #e2e8f0;
+  --color-surface-a40: #cbd5e1;
+  --color-surface-a50: #94a3b8;
 
   --color-surface-tonal-a0: #ffffff;
-  --color-surface-tonal-a10: #f3f4f6;
-  --color-surface-tonal-a20: #e5e7eb;
-  --color-surface-tonal-a30: #d1d5db;
-  --color-surface-tonal-a40: #9ca3af;
-  --color-surface-tonal-a50: #6b7280;
+  --color-surface-tonal-a10: #f8fafc;
+  --color-surface-tonal-a20: #f1f5f9;
+  --color-surface-tonal-a30: #e2e8f0;
+  --color-surface-tonal-a40: #cbd5e1;
+  --color-surface-tonal-a50: #94a3b8;
 }
 
 @tailwind utilities;

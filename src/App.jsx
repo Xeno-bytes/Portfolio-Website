@@ -46,9 +46,12 @@ function App() {
     setIsAnimating(true)
   }
 
+  // Common card style string for reusability
+  const cardStyle = "border border-solid border-surface-a30 bg-surface-a10 p-6 sm:p-10 lg:p-16 rounded-3xl shadow-surface-a20/40 hover:shadow-xl transition-shadow duration-300 ease-in-out"
+
   return (
     <motion.div 
-      className="min-h-screen bg-surface-a0"
+      className="min-h-screen bg-surface-a0 overflow-x-hidden"
       animate={{ backgroundColor: 'var(--color-surface-a0)' }}
       transition={{ duration: 0.5, ease: 'easeInOut' }}
     >
@@ -60,12 +63,13 @@ function App() {
         onComplete={() => setIsAnimating(false)}
       />
 
+      {/* Header Section */}
       <motion.div 
         variants={fadeInUp}
         initial="hidden"
         animate="visible"
         custom={0}
-        className="flex items-start justify-between px-20 py-15 gap-6"
+        className="flex flex-col-reverse sm:flex-row items-start justify-between px-4 sm:px-10 lg:px-20 py-8 lg:py-15 gap-6"
       >
         <Overview theme={theme} onViewResume={() => setActivePdf(Resume)} />
 
@@ -73,7 +77,7 @@ function App() {
           onClick={handleThemeToggle}
           disabled={isAnimating}
           className="
-            h-fit px-4 py-2 rounded-xl
+            self-end sm:self-auto h-fit px-4 py-2 rounded-xl
             border border-surface-a30
             bg-surface-a10
             text-sm font-medium
@@ -86,15 +90,16 @@ function App() {
         </button>
       </motion.div>
 
-      <div className='flex flex-col lg:flex-row gap-10 px-10 lg:px-20 pb-10 items-start '>
-        <div className='w-full lg:w-3/5 flex flex-col gap-10'>
+      {/* Main Content Grid */}
+      <div className='flex flex-col lg:flex-row gap-6 lg:gap-10 px-4 sm:px-10 lg:px-20 pb-6 lg:pb-10 items-start'>
+        <div className='w-full lg:w-3/5 flex flex-col gap-6 lg:gap-10'>
           {/* About Me */}
           <motion.div 
             variants={fadeInUp}
             initial="hidden"
             animate="visible"
             custom={0.1}
-            className='border border-solid border-surface-a30 bg-surface-a10 px-20 py-10 rounded-3xl shadow-surface-a20/40 hover:shadow-xl transition-shadow duration-300 ease-in-out'
+            className={cardStyle}
           >
             <AboutMe />
           </motion.div>
@@ -105,32 +110,31 @@ function App() {
             initial="hidden"
             animate="visible"
             custom={0.2}
-            className='border border-solid border-surface-a30 bg-surface-a10 px-20 py-10 rounded-3xl shadow-surface-a20/40 hover:shadow-xl transition-shadow duration-300 ease-in-out'
+            className={cardStyle}
           >
             <TechStack />
           </motion.div>
         </div>
 
-        <div className='w-full lg:w-2/5'>
+        <div className='w-full lg:w-2/5 flex flex-col gap-6 lg:gap-10'>
           {/* Experience */}
-          <div className="flex-wrap items-start justify-center pb-10">
-            <motion.div 
-              variants={fadeInUp}
-              initial="hidden"
-              animate="visible"
-              custom={0.1}
-              className='border border-solid border-surface-a30 bg-surface-a10 px-20 py-10 rounded-3xl shadow-surface-a20/40 hover:shadow-xl transition-shadow duration-300 ease-in-out'
-            >
-              <Experience />
-            </motion.div>
-          </div>
+          <motion.div 
+            variants={fadeInUp}
+            initial="hidden"
+            animate="visible"
+            custom={0.1}
+            className={cardStyle}
+          >
+            <Experience />
+          </motion.div>
 
+          {/* Beyond Coding */}
           <motion.div 
             variants={fadeInUp}
             initial="hidden"
             animate="visible"
             custom={0.2}
-            className='border border-solid border-surface-a30 bg-surface-a10 px-20 py-10 rounded-3xl shadow-surface-a20/40 hover:shadow-xl transition-shadow duration-300 ease-in-out'
+            className={cardStyle}
           >
             <BeyondCoding />
           </motion.div>
@@ -138,40 +142,40 @@ function App() {
       </div>
 
       {/* Recent Projects */}
-      <div className='px-20 pb-10'>
+      <div className='px-4 sm:px-10 lg:px-20 pb-6 lg:pb-10'>
         <motion.div 
           variants={fadeInUp}
           initial="hidden"
           animate="visible"
           custom={0.3}
-          className='border border-solid border-surface-a30 bg-surface-a10 px-20 py-10 rounded-3xl shadow-surface-a20/40 hover:shadow-xl transition-shadow duration-300 ease-in-out'
+          className={cardStyle}
         >
           <Projects />
         </motion.div>
       </div>
 
       {/* Certifications & Contacts */}
-      <div className='flex flex-col lg:flex-row gap-10 px-10 lg:px-20 pb-20 items-stretch'>
-        <div className='w-full lg:w-2/5 flex flex-col gap-10'>
+      <div className='flex flex-col lg:flex-row gap-6 lg:gap-10 px-4 sm:px-10 lg:px-20 pb-12 lg:pb-20 items-stretch'>
+        <div className='w-full lg:w-2/5 flex flex-col gap-6 lg:gap-10'>
           <motion.div 
             variants={fadeInUp}
             initial="hidden"
             animate="visible"
             custom={0.4}
-            className='border border-solid border-surface-a30 bg-surface-a10 px-20 py-10 rounded-3xl shadow-surface-a20/40 hover:shadow-xl transition-shadow duration-300 ease-in-out h-full'
+            className={`${cardStyle} h-full`}
           >
             <Certifications onCertClick={(file) => setActivePdf(file)} />
           </motion.div>
         </div>
 
         {/* Contacts */}
-        <div className='w-full lg:w-4/5 flex flex-col gap-10'>
+        <div className='w-full lg:w-3/5 flex flex-col gap-6 lg:gap-10'>
           <motion.div 
             variants={fadeInUp}
             initial="hidden"
             animate="visible"
             custom={0.4}
-            className='border border-solid border-surface-a30 bg-surface-a10 px-20 py-10 rounded-3xl shadow-surface-a20/40 hover:shadow-xl transition-shadow duration-300 ease-in-out h-full'
+            className={`${cardStyle} h-full`}
           >
             <Contacts />
           </motion.div>
@@ -182,17 +186,17 @@ function App() {
       {activePdf && (
         <div 
           onClick={() => setActivePdf(null)} 
-          className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-sm p-4"
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm p-3 sm:p-6"
         >
           <div 
             onClick={(e) => e.stopPropagation()} 
-            className="relative w-full max-w-5xl h-[80vh] bg-white rounded-2xl shadow-2xl flex flex-col overflow-hidden"
+            className="relative w-full max-w-5xl h-[85vh] bg-surface-a0 rounded-2xl shadow-2xl flex flex-col overflow-hidden border border-surface-a30"
           >
-            <div className="p-4 border-b flex justify-between items-center bg-surface-a10">
-              <span className="font-bold">Credential View</span>
+            <div className="p-4 border-b border-surface-a30 flex justify-between items-center bg-surface-a10">
+              <span className="font-bold text-text-primary">Credential View</span>
               <button 
                 onClick={() => setActivePdf(null)}
-                className="px-3 py-1 bg-red-500 text-white rounded-lg hover:bg-red-600"
+                className="px-3 py-1 bg-danger-a0 text-white rounded-lg hover:bg-danger-a10 transition-colors text-sm"
               >
                 Close
               </button>
