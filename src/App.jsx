@@ -46,7 +46,7 @@ function App() {
     setIsAnimating(true)
   }
 
-  // Common card style string for reusability
+  // Reusable card style
   const cardStyle = "border border-solid border-surface-a30 bg-surface-a10 p-6 sm:p-10 lg:p-16 rounded-3xl shadow-surface-a20/40 hover:shadow-xl transition-shadow duration-300 ease-in-out"
 
   return (

@@ -58,11 +58,20 @@ function Projects() {
                             rel="noopener noreferrer"
                             className="group block whitespace-normal snap-center shrink-0 active:scale-[0.98] transition-transform duration-200"
                         >
-                            <div className='w-[82vw] sm:w-[480px] md:w-[540px] h-full p-5 sm:p-8 rounded-3xl border-2 border-border-primary/20 bg-surface-a10 transition-all duration-300 sm:hover:-translate-y-1 sm:group-hover:border-primary-a30 sm:group-hover:bg-surface-a20 shadow-md sm:hover:shadow-2xl flex flex-col'>
+                            <div className='w-[82vw] sm:w-120 md:w-135 h-full p-5 sm:p-8 rounded-3xl border-2 border-border-primary/20 bg-surface-a10 transition-all duration-300 sm:hover:-translate-y-1 sm:group-hover:border-primary-a30 sm:group-hover:bg-surface-a20 shadow-md sm:hover:shadow-2xl flex flex-col'>
                                 
-                                <div className='w-full aspect-video overflow-hidden rounded-2xl mb-4 sm:mb-6 border border-border-primary/5 shrink-0 bg-black/20'>
+                                <div className='relative w-full h-52 sm:h-64 overflow-hidden rounded-2xl mb-4 sm:mb-6 border border-surface-a30 shrink-0 bg-surface-a20 flex items-center justify-center'>
+                                    {/* Blurred Backdrop Fill */}
                                     <img 
-                                        className="w-full h-full object-contain transition-transform duration-500 ease-in-out sm:group-hover:scale-105"
+                                        className="absolute inset-0 w-full h-full object-cover blur-xl opacity-100 scale-110 pointer-events-none"
+                                        src={project.imgsrc} 
+                                        alt=""
+                                        aria-hidden="true"
+                                    />
+                                    
+                                    {/* Foreground Image */}
+                                    <img 
+                                        className="relative z-10 max-w-full max-h-full object-contain p-2 transition-transform duration-500 ease-in-out sm:group-hover:scale-105"
                                         src={project.imgsrc} 
                                         alt={project.title}
                                     />
